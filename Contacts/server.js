@@ -1,7 +1,10 @@
 const env = require('dotenv').config()
 const express = require('express');
 const app = express();
+const contactRoutes = require('./routes/')
 
-const Port = process.env.Port || 8080;
+const port = process.env.PORT || 3000;
 
-app.listen(Port, () => console.log("Hello World"));
+app.use('/', contactRoutes)
+
+app.listen(port, () => console.log(`Server running on port ${port}`));

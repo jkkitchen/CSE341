@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const connectDB = require('./DB/Connection');
 
-const Port = process.env.Port || 3000;
+const Port = process.env.PORT || 3000;
 
 app.listen(Port, () => console.log("Server Started"));
 
