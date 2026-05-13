@@ -1,10 +1,27 @@
-const env = require('dotenv').config()
+//dotenv.config() loads variables in Node's global process.env objects automatically so you don't need to save this as a constant
+require('dotenv').config()
 const express = require('express');
+const { connectDB } = require('./db/connect');
 const app = express();
-const contactRoutes = require('./routes/')
+const contactsRoute = require('./routes/contactsRoute')
 
+//Get port from .env file
 const port = process.env.PORT || 3000;
 
-app.use('/', contactRoutes)
+//Pull route to get contacts
+app.use('/contacts', contactsRoute)
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+//Connect to database and start server
+const startServer = async () => {
+    try {
+        //Connect to database
+        await connectDB();
+        //Start server on port listed in .env file
+        app.listen(port, () => console.log(`Database listening and server running on port ${port}`));
+
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+startServer();
