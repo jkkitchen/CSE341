@@ -1,0 +1,12 @@
+
+### GET all contacts
+GET https://cse341-contacts-fpwa.onrender.com/contacts
+
+### GET one contact (3 values)
+GET https://cse341-contacts-fpwa.onrender.com/contacts/69fe90622855552cd00e0b81
+
+### GET one contact
+GET https://cse341-contacts-fpwa.onrender.com/contacts/69fe90852855552cd00e0b83
+
+### GET one contact
+GET https://cse341-contacts-fpwa.onrender.com/contacts/69fe90a52855552cd00e0b85
