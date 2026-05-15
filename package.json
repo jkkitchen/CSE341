@@ -29,6 +29,7 @@
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.6.0",
     "prettier": "^3.8.3",
-    "swagger": "^0.7.5"
+    "swagger": "^0.7.5",
+    "swagger-autogen": "^2.23.7"
   }
 }
