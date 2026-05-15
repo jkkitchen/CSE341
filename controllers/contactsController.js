@@ -56,11 +56,11 @@ const updateContact = async (req, res) => {
         const updatedContact = await Contact.findByIdAndUpdate(
             req.params.id,
             req.body,
-            { new: true, runValidator: true } //new:true returns updated document, runValidator:true enforces schema rules
+            { new: true, runValidators: true } //new:true returns updated document, runValidators:true enforces schema rules
         );
 
         //Use an if statement to determine if contact exists
-        if (!updateContact) {
+        if (!updatedContact) {
             return res.status(404).json({ message: 'Contact not found' });
         };
 
