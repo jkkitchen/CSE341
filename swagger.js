@@ -6,8 +6,7 @@ const doc = {
     description: 'Week 2 Assignment'
   },
     host: 'localhost:3000',
-    schemes: ['http'],
-    basePath: '/contacts'
+    schemes: ['http']    
 };
 
 const outputFile = './swagger-output.json';
