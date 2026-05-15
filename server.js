@@ -9,11 +9,13 @@ const contactsRoute = require('./routes/contactsRoute')
 //Get port from .env file
 const port = process.env.PORT || 3000;
 
-//Pull route to get/add/update/delete contacts
-app.use('/contacts', contactsRoute)
+//MUST PUT THIS BEFORE CONTACTS ROUTES OR POST WILL NOT WORK
 //Rather than using bodyParser, use express.json to do the same thing
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); //tells Express to parse incoming form data so it can be accessed in req.body
+
+//Pull route to get/add/update/delete contacts
+app.use('/contacts', contactsRoute)
 
 //Connect to database and start server
 const startServer = async () => {
