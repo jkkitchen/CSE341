@@ -89,6 +89,37 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Updated contact information",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string",
+                  "example": "Jessica"
+                },
+                "lastName": {
+                  "type": "string",
+                  "example": "Kitchen"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "jessica@test.com"
+                },
+                "favoriteColor": {
+                  "type": "string",
+                  "example": "Purple"
+                },
+                "birthday": {
+                  "type": "string",
+                  "example": "1995-01-01"
+                }
+              }
+            }
           }
         ],
         "responses": {
