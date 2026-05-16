@@ -6,7 +6,7 @@ const doc = {
     description: 'Week 2 Assignment'
   },
     host: 'cse341-contacts-fpwa.onrender.com', //Render URL
-    schemes: ['http']    
+    schemes: ['https']    
 };
 
 const outputFile = './swagger-output.json';
