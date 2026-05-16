@@ -5,7 +5,7 @@ const doc = {
     title: 'CSE 341 Contacts API Documentation',
     description: 'Week 2 Assignment'
   },
-    host: 'localhost:3000',
+    host: 'https://cse341-contacts-fpwa.onrender.com', //Render URL
     schemes: ['http']    
 };
 
